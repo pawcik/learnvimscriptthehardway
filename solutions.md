@@ -22,3 +22,31 @@ nmap <c-u> mwgUiw`w
     gU{motion} - make text upper case
     iw - motion to select word
     \`w - jump to saved mark
+
+# 08 Abbreviations
+# 09 More Abbreviations
+
+```
+:noremap <leader>' viw<esc>a'<esc>bi'<esc>el
+```
+
+
+* Try using `vnoremap` to add a mapping that will wrap whatever text you have *visually selected* in quotes.
+
+```
+:vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
+```
+    \`< - jump to the first character of last selection
+    \`> - jump to the last character of last selection
+    l - move extra left cause inserted new char
+    a - insert mode after currect selection
+
+* Map `H` in normal mode to go to the beginning of the current line.
+    ```
+    :noremap H 0
+    ```
+
+* Map `L` in normal mode to go to the end of the current line.
+    ```
+    :noremap L $
+    ```
